@@ -1,0 +1,35 @@
+<?xml version="1.0"  encoding="utf-8" ?>
+
+<project default="all" basedir=".">
+	<property name="dir.project" value="." />
+	<property name="dir.project.src" value="${dir.project}/src" />
+	<property name="dir.project.lib" value="${dir.project}/lib" />
+	<property name="dir.project.build" value="${dir.project}/build" />
+
+	<path id="CLASSPATH">
+		<fileset dir="${dir.project.lib}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<target name="init">
+		<mkdir dir="${dir.project.build}" />
+		<tstamp />
+	</target>
+
+	<target name="build" depends="init">
+		<javac srcdir="${dir.project.src}" destdir="${dir.project.build}" encoding="utf-8" debug="on" debuglevel="source,lines">
+			<classpath refid="CLASSPATH" />
+			<include name="**/*.java" />
+		</javac>
+	</target>
+
+	<target name="clean">
+        <delete dir="${dir.project.build}" failonerror="off" />
+    </target>
+
+    <target name="all">
+		<antcall target="clean" />
+		<antcall target="build" />
+    </target>
+</project> 
