@@ -7,7 +7,7 @@ Dependency:
 
 Usage:
 
-Clone from "git://github.com/iriya/rabbitmq-benchmark.git" and run make.
+Clone from git://github.com/iriya/rabbitmq-benchmark.git and run make.
 
 1. Produce test:
 bin/producer.sh
