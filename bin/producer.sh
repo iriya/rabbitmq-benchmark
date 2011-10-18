@@ -8,4 +8,4 @@ for i in $dir/../lib/*.jar; do
   CLASSPATH="$CLASSPATH":"$i"
 done
 
-$JAVA -cp info.jeffkit.rabbitmq.benchmark.Producer $@
+$JAVA -cp $CLASSPATH info.jeffkit.rabbitmq.benchmark.Producer $@
