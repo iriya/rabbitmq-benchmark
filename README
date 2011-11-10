@@ -8,6 +8,7 @@ Dependency:
 Usage:
 
 Clone from git://github.com/iriya/rabbitmq-benchmark.git and run make.
+If want test special version of rabbitmq, look into Makefile and edit the 'CLIENT=' section.
 
 1. Produce test:
 bin/producer.sh
